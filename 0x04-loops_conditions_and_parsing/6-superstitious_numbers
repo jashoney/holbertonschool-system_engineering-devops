@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+a=1
+while [ "$a" -ne 21 ]
+do
+   case $a in
+      4) echo $a
+         echo 'bad luck from China';;
+      9) echo $a 
+         echo 'bad luck from Japan';;
+      17) echo $a 
+          echo 'bad luck from Italy';;
+      *) echo $a;;
+   esac
+   a=`expr $a + 1`
+done
