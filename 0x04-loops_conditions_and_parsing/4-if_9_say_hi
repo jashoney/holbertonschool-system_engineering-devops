@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+a=1
+while [ "$a" -ne 11 ]
+do
+   if [ "$a" = 9 ]
+      then echo 'Hi'
+   else 
+      echo 'Best School'
+   fi
+   a=`expr $a + 1`
+done
