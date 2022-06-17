@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-ls | cut -d "-" -f2
+for filename in *
+do
+   echo "$filename" | cut -d "-" -f2
+done
