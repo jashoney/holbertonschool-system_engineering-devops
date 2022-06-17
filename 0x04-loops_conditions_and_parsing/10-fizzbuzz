@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+i=1
+while [ "$i" -lt 101 ]
+do
+    mod3=$((i%3))
+    mod5=$((i%5))
+    if [ "$mod3" -eq 0 ]
+    then
+        if [ $mod5 -ne 0 ]
+        then
+            echo "Fizz"
+        else
+            echo "FizzBuzz"
+        fi
+    fi
+    if [ $mod5 -eq 0 ]
+    then
+        if [ $mod3 -ne 0 ]
+        then
+            echo "Buzz"
+        fi
+    fi
+    if [ $mod3 -ne 0 ]
+    then
+        if [ $mod5 -ne 0 ]
+        then
+            echo $i
+        fi
+    fi
+    ((i++))
+done
