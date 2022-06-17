@@ -11,5 +11,5 @@ do
           echo 'bad luck from Italy';;
       *) echo $a;;
    esac
-   a=`expr $a + 1`
+   ((a++))
 done

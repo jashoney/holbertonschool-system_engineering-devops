@@ -3,5 +3,5 @@ a=0
 until [ "$a" -gt 9 ]
 do
    echo Best School 
-   a=`expr $a + 1`
+   ((a++))
 done

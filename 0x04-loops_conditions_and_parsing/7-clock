@@ -3,11 +3,11 @@ hour=0
 while [ "$hour" -ne 24 ]
 do
    echo 'Hour:' $hour
-   hour=`expr $hour + 1`
+   ((hour++))
    minute=1
    while [ "$minute" -ne 60 ]
    do
       echo $minute
-      minute=`expr $minute + 1`
+      ((minute++))
    done
 done
