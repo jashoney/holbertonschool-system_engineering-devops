@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#this is a comment
+# shellcheck disable=SC2009
+ps aufx | grep "bash"
