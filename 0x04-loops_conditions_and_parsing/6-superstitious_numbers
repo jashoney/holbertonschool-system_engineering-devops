@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# its a comment
 a=1
 while [ "$a" -ne 21 ]
 do

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# its a comment
 hour=0
 while [ "$hour" -ne 24 ]
 do

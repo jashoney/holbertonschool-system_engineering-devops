@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# its a comment
 filename="school"
 if [ -e "$filename" ]
     then
