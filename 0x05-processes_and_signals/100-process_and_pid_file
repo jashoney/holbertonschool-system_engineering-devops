@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #this is a comment
-sudo echo $$ > /var/run/myscript.pid
+echo $$ > /var/run/myscript.pid
 trap "echo Y U no love me?!" SIGINT
 
 sigtermexit()
@@ -22,4 +22,5 @@ trap sigquitexit SIGQUIT
 while true
 do
     echo "To infinity and beyond"
+    sleep 2
 done
