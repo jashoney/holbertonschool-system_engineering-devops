@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# its a comment
 while read -r myline 
 do
     echo "$myline" | cut -d ":" -f1,3,6
