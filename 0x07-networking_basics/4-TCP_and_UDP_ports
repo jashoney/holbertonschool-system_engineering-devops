@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that displays the current active listening ports and the pid
+
+sudo netstat -lp
