@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bash script that installs nginx, starts it, then provides a test html page
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+sudo chmod -R 755 /var/www
+sudo echo "Hello World" > /var/www/html/index.nginx-debian.html
