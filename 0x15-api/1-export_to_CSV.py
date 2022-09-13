@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" uses jsonplaceholder REST api to return info 
-    all tasks owned by an employee are saved to csv format """
+""" all tasks owned by an employee are saved to a csv file """
 
 import csv
 from requests import get
@@ -14,10 +13,11 @@ if __name__ == "__main__":
     user = get(user_url + id).json()
     to_dos = get(to_do_url + id).json()
 
-    filename = id + ".csv"
+    csv_filename = id + ".csv"
 
-    with open(filename, mode='w') as export_file:
-        writer = csv.writer(export_file, quoting=csv.QUOTE_ALL)
+    with open(csv_filename, mode="w") as csv_file:
+        writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
         for task in to_dos:
-            writer.writerow([task["userId"], user["username"],
-                            task["completed"], task["title"]])
+            writer.writerow([task['userId'], user['username'],
+                            task['completed'], task['title']])
+
