@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" uses jsonplaceholder REST api to return info 
+""" uses jsonplaceholder REST api to return info
     program accepts an interger as a parameter
     identifying the employee
 """
@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     name = user.get('name')
 
-    print("Employee {} is done with tasks ({}/{}:".
+    print("Employee {} is done with tasks ({}/{}):".
           format(name, len(tasks_done), len(to_dos)))
     for task in tasks_done:
         print("\t {}".format(task))
