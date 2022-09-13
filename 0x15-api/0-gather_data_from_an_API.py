@@ -4,8 +4,7 @@
     identifying the employee
 """
 
-import json
-import requests
+from requests import get
 from sys import argv
 
 if __name__ == "__main__":
@@ -13,17 +12,21 @@ if __name__ == "__main__":
 
     user_url = "https://jsonplaceholder.typicode.com/users/"
     to_do_url = "https://jsonplaceholder.typicode.com/todos/?userId="
-    user = requests.get(user_url + id).json()
-    to_dos = requests.get(to_do_url + id).json()
+    user = get(user_url + id).json()
+    to_dos = get(to_do_url + id).json()
 
-    tasks_done = []
+    total_tasks = 0
+    tasks_completed = 0
+    tasks_done_list = []
     for task in to_dos:
-        if task.get("completed") is True:
-            tasks_done.append(task.get("title"))
+        total_tasks += 1
+        if task["completed"] is True:
+            tasks_completed += 1
+            tasks_done_list.append(task["title"])
 
-    name = user.get('name')
+    name = user['name']
 
     print("Employee {} is done with tasks({}/{}):".
-          format(name, len(tasks_done), len(to_dos)))
-    for task in tasks_done:
+          format(name, tasks_completed, total_tasks))
+    for task in tasks_done_list:
         print("\t {}".format(task))
