@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ uses jsonplaceholder REST api to return info
-    all tasks owned by an employee are saved to csv """
+    all tasks owned by an employee are saved to csv
+"""
 
 import csv
 import json

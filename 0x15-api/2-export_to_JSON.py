@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ uses jsonplaceholder REST api to return info
-    exports data to json file"""
+    exports data to json file
+"""
 
 import json
 import requests
