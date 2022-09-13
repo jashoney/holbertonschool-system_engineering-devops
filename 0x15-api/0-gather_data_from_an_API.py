@@ -5,7 +5,7 @@
 """
 
 import json
-import requests
+import requests 
 from sys import argv
 
 if __name__ == "__main__":
@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     name = user.get('name')
 
-    print("Employee {} is done with tasks ({}/{}):".
+    print("Employee {} is done with tasks({}/{}):".
           format(name, len(tasks_done), len(to_dos)))
     for task in tasks_done:
         print("\t {}".format(task))
