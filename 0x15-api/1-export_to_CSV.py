@@ -20,4 +20,3 @@ if __name__ == "__main__":
         for task in to_dos:
             writer.writerow([task['userId'], user['username'],
                             task['completed'], task['title']])
-
